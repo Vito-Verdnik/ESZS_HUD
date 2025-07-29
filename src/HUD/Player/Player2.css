@@ -1,0 +1,581 @@
+@import '../../App.css';
+.player-div{
+    position: fixed;
+
+    width: 19.5vw;
+    height: 4.8vw;
+    transform: translateY(-50%);
+
+}
+
+
+
+
+
+.player-main-div{
+    position: absolute;
+    top: 0;
+
+
+    width: 19.5vw;
+    height: 4.8vw;
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.78);
+    /*background-image: url('../assets/images/ESZS_Pattern_Opacity.png');*/
+    background-repeat: repeat;
+    background-size: 40%;
+    border-radius: 0.83vw;
+    overflow: hidden;
+
+
+
+}
+.player-main-div.l{
+    left: 0;
+}
+
+.player-main-div.r{
+    right: 0;
+}
+
+.player-main-div.observed{
+    outline: 0.15vw rgba(255,255,255, 1) solid;
+}
+.player-main-div.dead{
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.42);
+    width: 11.5vw;
+}
+.player-top-div{
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.8);
+    box-sizing: border-box;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33%;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    filter: drop-shadow(0 0.2vw 0.2vw rgba(0, 0, 0, 0.9));
+}
+
+.player-top-div.dead{
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.40);
+}
+
+
+
+.player-top-name{
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+
+
+    font-size: 0.8vw;
+    height: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+
+.player-top-name.ct{
+
+   color: rgba(var(--CT_COLOR), 1.0);
+
+}
+.player-top-name.l{
+    text-align: left;
+    order: 1;
+}
+.player-top-name.r{
+    order: 2;
+    text-align: right;
+}
+
+.player-top-name.t{
+
+   color: rgba(var(--T_COLOR), 1.0);
+}
+.player-top-name.dead.ct{
+    color: rgba(var(--CT_COLOR), 0.73);
+}
+
+.player-top-name.dead.t{
+    color: rgba(var(--T_COLOR), 0.73);
+
+}
+
+.player-top-name.dead.l{
+    order: 1;
+}
+.player-top-name.dead.r{order: 2;}
+
+.player-top-primary{
+    margin-top: 0.15vw;
+    height: 85%;
+    width: auto;
+    fill: white;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+}
+
+.player-top-primary.l{
+    order: 2;
+}
+
+.player-top-primary.r{
+    order: 1;
+    transform: scaleX(-1);
+}
+
+.player-middle-div{
+    width: 100%;
+    height: 39%;
+
+    position: absolute;
+    top: 33%;
+    left: 0;
+
+}
+
+.player-middle-armor-icon{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+
+    height: 70%;
+    width: auto;
+}
+
+.player-middle-armor-icon.ct{
+
+    fill: rgba(var(--CT_COLOR), 1.0);
+}
+.player-middle-armor-icon.r{
+    left: 95%;
+}
+.player-middle-armor-icon.l{
+    left: 5%;
+}
+
+.player-middle-armor-icon.t{
+
+   fill: rgba(var(--T_COLOR), 1.0);
+}
+.player-middle-armor-icon.r{left: 95%;}
+
+.player-middle-kills{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2vw;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+}
+
+.player-middle-kills.l{
+    left: 11%;
+}
+.player-middle-kills.r{
+
+    right: 28%;
+}
+
+.player-middle-kills.dead.l{
+    left: 3.5%;
+}
+.player-middle-kills.dead.r{
+
+    right: 33%;
+}
+
+.player-middle-kills-icon{
+    height: 1vw;
+    width: auto;
+
+
+}
+.player-middle-kills-icon.ct {
+    fill: rgba(var(--CT_COLOR), 1.0);
+}
+
+.player-middle-kills-icon.t{
+    fill: rgba(var(--T_COLOR), 1.0);
+}
+.player-middle-kills-icon.dead.ct{
+    fill: rgba(var(--CT_COLOR), 0.73);
+}
+.player-middle-kills-icon.dead.t{
+    fill: rgba(var(--T_COLOR), 0.73);
+}
+
+.player-middle-kills-count, .player-middle-deaths-count{
+    margin-top: 0.4vh;
+    text-align: left;
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+    font-size: 1.1vw;
+
+    height: fit-content;
+    width: fit-content;
+    line-height: 1;
+}
+
+.player-middle-kills-count.ct, .player-middle-deaths-count.ct{
+    color: rgba(var(--CT_COLOR), 1.0);
+}
+.player-middle-kills-count.t, .player-middle-deaths-count.t{
+    color: rgba(var(--T_COLOR), 1.0);
+}
+.player-middle-kills-count.dead.ct, .player-middle-deaths-count.dead.ct{
+    color: rgba(var(--CT_COLOR), 0.73);
+}
+.player-middle-kills-count.dead.t, .player-middle-deaths-count.dead.t{
+    color: rgba(var(--T_COLOR), 0.73);
+}
+
+.player-middle-deaths{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2vw;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.player-middle-deaths.l{
+
+    left: 28%;
+}
+.player-middle-deaths.r{
+    right: 11%;
+
+}
+
+.player-middle-deaths.dead.l{
+    left: 33%;
+}
+.player-middle-deaths.dead.r{
+    right: 3.5%
+}
+
+
+.player-middle-deaths-icon{
+    height: 1vw;
+    width: auto;
+
+}
+.player-middle-deaths-icon.ct{
+    fill: rgba(var(--CT_COLOR), 1.0);
+}
+.player-middle-deaths-icon.t{
+    fill: rgba(var(--T_COLOR), 1.0);
+}
+
+.player-middle-deaths-icon.dead.ct{
+fill: rgba(var(--CT_COLOR), 0.73);
+}
+.player-middle-deaths-icon.dead.t{
+ fill: rgba(var(--T_COLOR), 0.73);
+}
+
+.player-middle-kir-container{
+height: 60%;
+width: 1.4vw;
+position: absolute;
+top: 50%;
+
+transform: translate(-50%, -50%);
+}
+.player-middle-kir-container.l{
+left: 47%;
+}
+.player-middle-kir-container.r{
+left: 53%;
+}
+
+.player-middle-kir-container.dead.l{
+left: 68%;
+}
+.player-middle-kir-container.dead.r{
+left: 22%;
+}
+.player-middle-kir{
+
+}
+
+.player-middle-equipment-container{
+height: 80%;
+width: 40%;
+position: absolute;
+top: 50%;
+
+display: flex;
+flex-flow: row;
+
+align-items: center;
+transform: translateY(-50%);
+
+
+}
+
+.player-middle-equipment-container.l{
+right: 0;
+padding-right: 0.4vw;
+justify-content: end;
+}
+.player-middle-equipment-container.r{
+left: 1.5%;
+padding-left: 0.4vw;
+justify-content: start;
+transform: translateY(-50%) scaleX(-1);
+}
+
+.player-bottom-div{
+position: absolute;
+bottom:0;
+left:0;
+width: 100%;
+height: 28%;
+
+overflow: hidden;
+display: flex;
+flex-flow: row;
+justify-content: space-between;
+align-items: center;
+
+}
+.player-bottom-div.ct{
+    background-color: rgba(var(--CT_COLOR), 0.4);
+}
+.player-bottom-div.t{
+    background-color: rgba(var(--T_COLOR), 0.4);
+}
+
+.player-bottom-div.dead.ct{
+    background-color: rgba(var(--CT_COLOR), 0);
+}
+.player-bottom-div.dead.t{
+    background-color: rgba(var(--T_COLOR), 0);
+
+}
+.player-bottom-div.dead.r{
+justify-content: end;
+}
+
+.player-bottom-bar{
+position: absolute;
+bottom: 0;
+
+width: 100%;
+height: 100%;
+
+z-index: 1;
+}
+.player-bottom-bar.ct{
+    background-color: rgba(var(--CT_COLOR), 1);
+
+}
+.player-bottom-bar.l{
+left: 0;
+}
+.player-bottom-bar.t{
+     background-color: rgba(var(--T_COLOR), 1);
+
+}
+.player-bottom-bar.r{
+right: 0;
+}
+
+.player-bottom-money{
+
+
+width: fit-content;
+height: fit-content;
+z-index: 2;
+
+}
+.player-bottom-money.ct{
+padding-right: 0.4vw;
+
+}
+.player-bottom-money.l{
+order: 2;
+}
+
+.player-bottom-money.r{
+order: 1;
+
+}
+.player-bottom-money.t{
+padding-left: 0.4vw;
+
+}
+.player-bottom-money.dead.l{
+padding-left: 0.4vw;
+}
+.player-bottom-money.dead.r{
+padding-right: 0.4vw;
+}
+.player-bottom-money-text{
+z-index: 2;
+font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+font-size: 0.9vw;
+color: white;
+height: fit-content;
+
+line-height: 1;
+filter: drop-shadow(0 0.21vw 0.26vw rgba(0, 0, 0, 0.9));
+}
+.player-bottom-money-text.l{
+text-align: right;
+}
+.player-bottom-money-text.r{
+text-align: left
+}
+.player-bottom-money-text.dead{
+color: rgba(255,255,255, 0.6);
+}
+
+.player-bottom-hp-icon{
+height: 0.8vw;
+width: auto;
+fill: white;
+flex-shrink: 0;
+flex-grow: 0;
+filter: drop-shadow(0 0.21vw 0.26vw rgba(0, 0, 0, 0.9));
+}
+
+.player-bottom-hp-text{
+font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+height: fit-content;
+
+font-size: 1.2vw;
+color: white;
+filter: drop-shadow(0 0.21vw 0.26vw rgba(0, 0, 0, 0.9));
+}
+.player-bottom-hp-text.l{text-align: left;}
+.player-bottom-hp-text.r{text-align: right;}
+.player-bottom-hp{
+width: fit-content;
+height: fit-content;
+z-index: 2;
+display: flex;
+flex-flow: row;
+justify-content: space-between;
+gap: 0.2vw;
+align-items: center;
+
+}
+.player-bottom-hp.l{padding-left: 0.4vw;
+order: 1;
+}
+.player-bottom-hp.r{padding-right: 0.4vw;
+order: 2;
+}
+
+.player-bottom-dmg-container{
+position: absolute;
+
+bottom: 0;
+width: fit-content;
+height: fit-content;
+display: flex;
+flex-flow: row;
+
+align-items: baseline;
+gap: 0.2vw;
+
+}
+.player-bottom-dmg-container.ct{
+
+    color: rgba(var(--CT_COLOR), 0.73);
+}
+.player-bottom-dmg-container.l{
+right: 2%;
+justify-content: end;
+padding-right: 0.4vw;
+}
+.player-bottom-dmg-container.r{
+left: 2%;
+justify-content: start;
+padding-left: 0.4vw;
+}
+.player-bottom-dmg-container.t{
+
+    color: rgba(var(--T_COLOR), 0.73);
+}
+
+.player-bottom-dmg{
+font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+font-size: 0.6vw;
+
+}
+
+.player-bottom-dmg-text{
+font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+font-size: 1vw;
+
+}
+.player-bottom-dmg-text.l{text-align: left;}
+.player-bottom-dmg-text.r{text-align: left;}
+
+
+.player-number-icon{
+height: 70%;
+width: auto;
+position: absolute;
+top: 55%;
+
+transform: translate(-50%, -50%);
+z-index: -1;
+    fill: rgba(var(--BACKGROUND_COLOR), 0.7);
+}
+.player-number-icon.l{left: -1.7%;}
+.player-number-icon.r{left: 101.7%; transform: translate(-50%, -50%) scaleX(-1);}
+
+.player-number-text{
+position: absolute;
+top: 52%;
+
+transform: translate(-50%, -50%);
+z-index: -1;
+font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+height: fit-content;
+text-align: left;
+font-size: 0.8vw;
+color: rgba(255,255,255, 0.8);
+
+}
+.player-number-text.l{left: -3.3%;}
+.player-number-text.r{left: 103.3%;}
+
+.player-observed-div{
+position: absolute;
+top: 2%;
+
+width: 6%;
+aspect-ratio: 1;
+
+
+}
+.player-observed-div.l{left: -7%;}
+.player-observed-div.r{right: -7%;}
+
+.player-observed-icon{
+height: 100%;
+width: auto;
+}

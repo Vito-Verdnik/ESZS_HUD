@@ -35,6 +35,16 @@ code {
   perspective: 500px;
 }
 
+@font-face {
+  font-family: 'MonumentExtended-Regular';
+  src: local('MonumentExtended-Regular'), url('./fonts/MonumentExtended-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: local('Poppins-Bold'), url('./fonts/Poppins-Bold.ttf') format('truetype');
+}
+
 :root {
   --main-panel-color: rgba(12, 15, 18, 0.85);
   --sub-panel-color: rgba(0, 0, 0, 0.83);
@@ -50,6 +60,9 @@ code {
   --color-new-ct: #5ab8f4;
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
+  --BACKGROUND_COLOR: rgb(30, 34, 54);
+  --T_COLOR : rgb(236, 177, 0);
+  --CT_COLOR: rgb(73, 191, 177);
 }
 
 
