@@ -1,0 +1,243 @@
+@import '../../App.css';
+
+
+.scoreboard-div {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 31VW;
+    height: 5.5VW;
+}
+
+.scoreboard-div-main {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background-color: rgba(var(--BACKGROUND_COLOR), 1);
+    height: 3.8vw;
+    width: 31vw;
+    border-radius: 1vw;
+    background-image: url("./../../assets/ESZS_Pattern_Opacity.png");
+    background-repeat: repeat;
+    background-size: 30%;
+    Z-index: 1;
+    filter: drop-shadow(0 0.3vw 0.3vw rgba(0, 0, 0, 0.6));
+    /*backdrop-filter: brightness(0);*/
+}
+
+
+.scoreboard-name-left, .scoreboard-name-right {
+    position: absolute;
+    top: 13%;
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 1.6vw;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0.3vw 0.3vw rgba(0, 0, 0, 0.8));
+
+
+}
+.scoreboard-name-left{
+    left: 12%;
+}
+.scoreboard-name-right{
+    left: 88%;
+}
+
+
+.scoreboard-score-left, .scoreboard-score-right{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 18%;
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+
+}
+
+.scoreboard-score-left{
+    left: 36%
+}
+
+.scoreboard-score-right{
+    left: 64%;
+}
+
+.scoreboard-bo-left, .scoreboard-bo-right{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 73%;
+
+}
+
+.scoreboard-bo-left{
+    left: 12%;
+}
+.scoreboard-bo-right{
+    left: 88%;
+}
+
+
+.scoreboard-time{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.6vw;
+    transform: translateX(-50%);
+}
+
+.scoreboard-round{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.6vw;
+    transform: translateX(-50%);
+
+}
+
+.scoreboard-logo.left, .scoreboard-logo.right{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 18%;
+    height: 60%;
+    width: auto;
+}
+
+.scoreboard-logo.left{
+    left: 24.5%;
+}
+
+.scoreboard-logo.right{
+    left: 75.5%;
+}
+
+.scoreboard-logo-image{
+    height: 100%;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+.best-of-score-div {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 0.7vw;
+}
+
+.best-of-score-shape {
+    border-radius: 0.3vw;
+    height: 0.55vw;
+    width: 1.7vw;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 0.15vw 0.36vw rgba(0, 0, 0, 0.7);
+
+
+
+}
+
+.best-of-score-shape.ct,
+.best-of-score-shape.t {
+    box-shadow: none;
+}
+
+.best-of-score-shape.ct,
+.best-of-score-shape.t {
+    box-shadow: 0 0.15vw 0.36vw rgba(0, 0, 0, 1);
+}
+
+
+.best-of-score-shape.ct {
+    background-color: rgba(var(--CT_COLOR), 1.0);
+}
+
+.best-of-score-shape.t {
+    background-color: rgba(var(--T_COLOR), 1.0);
+}
+
+.tournament-logo{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.8vw;
+    width: auto;
+    z-index: 2;
+    filter: drop-shadow(0 0.3vw 0.3vw rgba(0, 0, 0, 0.8));
+
+}
+
+.scoreboard-stage-div{
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    transform: translateX(-50%);
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.8);
+    width: 12vw;
+    height: 1.15vw;
+    z-index: -1;
+    border-radius: 0.7vw 0.7vw 0 0;
+    padding-top: 0.13vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+
+
+}
+
+.scoreboard-stage-text{
+
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 0.65vw;
+    letter-spacing: 0.05vw;
+
+
+}
+
+.scoreboard-side{
+    width: 12vw;
+    height: 4.2vw;
+    border-radius: 1vw;
+    background-color: red;
+    position: absolute;
+    bottom: -7%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.scoreboard-side.left{
+    left: 18.5%;
+}
+
+.scoreboard-side.right{
+    left: 81.5%
+}
+
+.scoreboard-side.ct{
+    background-color: rgba(var(--CT_COLOR), 1.0);
+}
+
+.scoreboard-side.t{
+    background-color: rgba(var(--T_COLOR), 1.0);
+}

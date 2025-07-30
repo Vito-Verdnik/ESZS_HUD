@@ -1,3 +1,4 @@
+
 import { Team } from 'csgogsi';
 import * as I from '../../API/types';
 import { apiUrl } from './../../API';

@@ -19,6 +19,7 @@ import { Match } from "../../API/types";
 import { useAction } from "../../API/contexts/actions";
 import { Scout } from "../Scout";
 import Featured from "../Featured/Featured.tsx";
+import Scoreboard from "../Scoreboard/Scoreboard.tsx";
 
 interface Props {
   game: CSGO,
@@ -64,10 +65,11 @@ const Layout = ({game, match}: Props) => {
       {/*<Killfeed />*/}
       {/*<Overview match={match} map={game.map} players={game.players || []} /> THIS IS  UPCOMING MATCH*/}
       {/*<RadarMaps match={match} map={game.map} game={game} />*/}  {/*RADAR THAT ALSO HAS MAP VETO PICKED MAPS UP TOP*/}
-      <MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />
-      <Pause  phase={game.phase_countdowns}/>
+      {/*<MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />*/}
+        <Scoreboard match={match} map={game.map} phase={game.phase_countdowns} bomb={game.bomb} />
+{/*      <Pause  phase={game.phase_countdowns}/>
       <Timeout map={game.map} phase={game.phase_countdowns} />
-      <SeriesBox map={game.map} match={match} /> {/*THIS GIVES YOU THE BO3 ON THE SCOREBOARD WITH THE BO3 SCORE*/}
+      <SeriesBox map={game.map} match={match} /> THIS GIVES YOU THE BO3 ON THE SCOREBOARD WITH THE BO3 SCORE*/}
 
       {/*<Tournament />*/} {/*THIS IS A POPUP FOR THE TOURNAMENT NAME*/}
 

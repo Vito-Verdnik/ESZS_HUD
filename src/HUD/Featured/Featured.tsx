@@ -28,8 +28,8 @@ export default function Featured({ player }: { player: Player | null }) {
     const grenades = weapons.filter(weapon => weapon.type === "Grenade");
 
     const currentWeapon = player.weapons.filter(weapon => weapon.state === "active")[0];
-    let bulletsMain = currentWeapon?.ammo_clip?.toString() ?? "*";
-    let bulletsReserve= currentWeapon?.ammo_reserve?.toString() ?? "*";
+    let bulletsMain = currentWeapon?.ammo_clip?.toString() ?? "-";
+    let bulletsReserve= currentWeapon?.ammo_reserve?.toString() ?? "-";
     return(
         <div className='featured-div'>
             <div className={`featured-div-main ${side}`}>
