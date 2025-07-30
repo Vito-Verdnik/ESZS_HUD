@@ -18,6 +18,7 @@ import { CSGO } from "csgogsi";
 import { Match } from "../../API/types";
 import { useAction } from "../../API/contexts/actions";
 import { Scout } from "../Scout";
+import Featured from "../Featured/Featured.tsx";
 
 interface Props {
   game: CSGO,
@@ -70,7 +71,7 @@ const Layout = ({game, match}: Props) => {
 
       {/*<Tournament />*/} {/*THIS IS A POPUP FOR THE TOURNAMENT NAME*/}
 
-        <Observed player={game.player}/> {/*THIS IS FEATURED PLAYER*/}
+        <Featured player={game.player}/> {/*THIS IS FEATURED PLAYER*/}
 
       <TeamBox team={left} players={leftPlayers} side="left" current={game.player} />
       <TeamBox team={right} players={rightPlayers} side="right" current={game.player} />  {/*THESE ARE ALL OF THE PLAYER BOXES FROM ONE SIDE*/}

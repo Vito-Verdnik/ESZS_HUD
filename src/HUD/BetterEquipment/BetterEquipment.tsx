@@ -11,7 +11,7 @@ export default function BetterEquipment(props) {
 
 
     return (
-        <div className="better-equipment">
+        <div className={`better-equipment${props.centerIt ? ' center' : ''}`}>
 
             {shouldShowWeapon && <Weapon  className={`better-equipment-secondary`}   weapon={props.secondary.name} active={props.secondary.state === "active"} />}
 

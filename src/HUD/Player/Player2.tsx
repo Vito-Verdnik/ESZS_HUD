@@ -146,7 +146,7 @@ const Player2 = ({ player, isObserved }: IProps) => {
                     </div>
 
                     {alive && (<div className={`player-middle-equipment-container ${position} ${side}`}>
-                        <BetterEquipment grenades={grenades} secondary={secondary} secondaryAsPrimary = {secondaryAsPrimary} />
+                        <BetterEquipment grenades={grenades} secondary={secondary} secondaryAsPrimary = {secondaryAsPrimary} centerIt={false}/>
                     </div>)}
                 </div>
 

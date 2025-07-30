@@ -1,0 +1,359 @@
+@import '../../App.css';
+
+
+.featured-div {
+    position: fixed;  /* Change to fixed */
+    color: blue;
+    height: 5vw;
+    width: 25vw;
+    transform: translateX(-50%);
+
+    left: 50%;
+    bottom: 8%;
+    right: 40%;
+
+
+}
+.weapon.active{
+    fill: rgba(255, 255,255, 1.0);
+    filter: drop-shadow( 0vw 0vw 0.2vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0.2vw 0vw 0vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0vw 0.2vw 0vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0vw 0vw -0.2vw rgba(255, 255, 255, 0.2))
+    drop-shadow( -0.2vw 0vw 0vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0vw -0.2vw 0vw rgba(255, 255, 255, 0.2))
+    brightness(100);
+
+
+}
+
+.featured-div-main {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.88);
+    background-image: url("./../../assets/ESZS_Pattern_Opacity.png");
+    background-repeat: repeat;
+    background-size: 40%;
+    height: 3.5vw;
+    width: 25vw;
+    border-radius: 0.83vw;
+    outline: 0.15vw rgba(255,255,255, 0.3) solid;
+
+
+}
+
+.featured-main-healthbar{
+    position: absolute;
+    top: 10%;
+    left: 2.5%;
+
+    width: 11.6vw;
+    height: 1.1vw;
+    border-radius: 0.15vw;
+    filter: drop-shadow(0 0.21vw 0.26vw rgba(0, 0, 0, 0.9));
+    overflow: hidden;
+
+}
+.featured-main-healthbar.ct{
+    background-color: rgba(var(--CT_COLOR), 0.3);
+}
+.featured-main-healthbar.t{
+    background-color: rgba(var(--T_COLOR), 0.3);
+}
+
+.featured-main-healthbar-bar{
+    height: 100%;
+    left:0;
+
+    filter: drop-shadow(0 0.21vw 0.35vw rgba(0, 0, 0, 0.9));
+}
+
+.featured-main-healthbar-bar.ct{
+    background-color: rgba(var(--CT_COLOR), 1.0);
+}
+.featured-main-healthbar-bar.t{
+    background-color: rgba(var(--T_COLOR), 1.0);
+}
+
+.progress-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.2vw;
+
+    opacity: 0.8;
+}
+.progress-marker.ct{background-color: #295050;}
+.progress-marker.t{background-color: #5e4700;}
+
+.featured-main-hp-div{
+    position: absolute;
+    top: 10%;
+    left: 51%;
+    height: 1vw;
+
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured-main-hp-icon{
+    width: 100%;
+    height: 100%;
+
+}
+.featured-main-hp-icon.ct{fill: rgba(var(--CT_COLOR), 1.0);}
+.featured-main-hp-icon.t{fill: rgba(var(--T_COLOR), 1.0);}
+
+.featured-main-hp-text{
+    height: 100%;
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    margin-bottom: 0.5vw;
+    margin-left: 0.2vw;
+
+
+}
+
+.featured-main-armor-div{
+    position: absolute;
+    top: 10%;
+    left: 66%;
+    height: 1vw;
+
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.featured-main-armor-icon{
+    height: 100%;
+    width: auto;
+}
+.featured-main-armor-icon svg{
+    height: 100%;
+    width: auto;
+}
+
+
+.featured-main-armor-icon.ct{fill: rgba(var(--CT_COLOR), 1.0);}
+.featured-main-armor-icon.t{fill: rgba(var(--T_COLOR), 1.0);}
+
+.featured-main-armor-text{
+    height: 100%;
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    font-size: 1.2vw;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    margin-bottom: 0.5vw;
+    margin-left: 0.2vw;
+
+
+}
+
+
+.featured-main-bullets-div{
+    position: absolute;
+    height: 1.2vw;
+    left: 82%;
+    top: 8%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.featured-main-bullets-icon{
+    height: 100%;
+    fill: white;
+}
+.featured-main-bullets-text{
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+    font-size: 1.1vw;
+    color: white;
+    text-align: left;
+    margin-top: 0.4vw;
+    margin-left: 0.2vw;
+}
+.featured-main-bullets-text-slash{
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+
+    font-size: 0.8vw;
+    margin-top: 0.4vw;
+}
+.featured-main-bullets-text-slash.ct{
+    color: rgba(var(--CT_COLOR), 0.75);
+}
+.featured-main-bullets-text-slash.t{
+    color: rgba(var(--T_COLOR), 0.75);
+}
+.featured-main-bullets-text-reserve{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+
+    font-size: 0.7vw;
+    margin-top: 0.6vw;
+}
+.featured-main-bullets-text-reserve.ct{
+    color: rgba(var(--CT_COLOR), 0.75);
+}
+.featured-main-bullets-text-reserve.t{
+    color: rgba(var(--T_COLOR), 0.75);
+}
+
+.featured-main-kills-div {
+    position: absolute;
+    left: 5%;
+    top: 57%;
+    height: 1.2vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2vw;
+}
+
+.featured-main-kills-text{
+
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+
+    font-size: 1.2vw;
+
+
+}
+.featured-main-kills-text.ct{
+    color: rgba(var(--CT_COLOR), 1.0);
+}
+.featured-main-kills-text.t{
+    color: rgba(var(--T_COLOR), 1.0);
+}
+
+.featured-main-kills-count{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: white;
+    font-size: 1.2vw;
+    text-align: left;
+}
+
+.featured-main-deaths-div{
+    position: absolute;
+    left: 18%;
+    top: 57%;
+    height: 1.2vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2vw;
+}
+
+.featured-main-deaths-text{
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+
+    font-size: 1.2vw;
+
+}
+
+.featured-main-deaths-text.ct{color: rgba(var(--CT_COLOR), 1.0);}
+.featured-main-deaths-text.t{color: rgba(var(--T_COLOR), 1.0);}
+
+.featured-main-deaths-count{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: white;
+    font-size: 1.2vw;
+    text-align: left;
+}
+
+
+
+.featured-main-adr-div{
+    position: absolute;
+    left: 30%;
+    top: 61%;
+    height: 1vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.2vw;
+}
+
+.featured-main-adr-text{
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+
+    font-size: 1vw;
+
+}
+
+.featured-main-adr-text.ct{color: rgba(var(--CT_COLOR), 1.0);}
+.featured-main-adr-text.t{color: rgba(var(--T_COLOR), 1.0);}
+
+.featured-main-adr-count{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: white;
+    font-size: 1.2vw;
+    text-align: left;
+}
+
+.featured-main-util-div{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    height: 1.4vw;
+    width: 8vw;
+}
+
+
+.featured-div-name {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 25.75%; /* Change from 7% to 50% */
+    transform: translateX(-50%); /* Add this to center horizontally */
+    height: 1.6vw;
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.9);
+    max-width: 11.6vw;
+    min-width: 5vw; /* Add minimum width */
+    overflow: hidden;
+    border-radius: 0.8vw 0.8vw 0 0;
+    padding-left: 1.42vw;
+    padding-right: 1.42vw;
+    transform-origin: center center; /* Add this to make it expand from center */
+    z-index: -2;
+}
+
+.featured-name-text{
+    font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+    color: white;
+    font-size: 0.7vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.1vw;
+    z-index: -1;
+    filter: drop-shadow(0 0.21vw 0.26vw rgba(0, 0, 0, 0.9));
+}
+
+
+.featured-div-kir{
+    box-sizing: border-box;
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.9);
+    position: absolute;
+    top: 1%;
+    left: 80%;
+    width: 1.9vw;
+    height: 1.46vw;
+    border-radius: 0.65vw 0.65vw 0 0;
+    padding: 0.12vw 0.18vw 0.18vw;
+    z-index: -2;
+
+}

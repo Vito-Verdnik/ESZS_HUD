@@ -8,6 +8,7 @@ interface FeaturedKIRProps {
 
 export default function FeaturedKIR(props: FeaturedKIRProps) {
     const alive = props.alive ?? true;
+    if(props.count === 0) return null;
     return (
         <div className='featured-kir-div'>
             <div className='featured-kir-icon-container'>

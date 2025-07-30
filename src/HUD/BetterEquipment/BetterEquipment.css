@@ -11,6 +11,11 @@
     align-items: center;
 }
 
+.better-equipment.center{
+    justify-content: center;
+    gap: 10%
+}
+
 .better-equipment-flashbang, .better-equipment-smokegrenade, .better-equipment-incgrenade, .better-equipment-hegrenade, .better-equipment-grenade{
     height: 100%;
     aspect-ratio: 0.8;
