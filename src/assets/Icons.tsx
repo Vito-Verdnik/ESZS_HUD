@@ -27,8 +27,21 @@ import Wallbang from './../assets/images/wallbang.svg?react';
 import LogoCT  from './../assets/images/logo_CT_default.png';
 import LogoT  from './../assets/images/logo_T_default.png';
 import SmallBomb from "./../assets/images/bomb.svg?react";
+import CrosshairIcon from "./../assets/images/Non_Orig_Crosshair.svg?react";
+import DeathIcon from "./../assets/images/Non_Orig_Death.svg?react";
+import HealthIcon from "./../assets/images/Non_Orig_Health_Icon.svg?react";
+import PlayerNumberIcon from "./../assets/images/SideNumber.svg?react";
+import ObservedIcon from "./../assets/images/Non_Orig_Observed.svg?react";
+import KirIcon from "./../assets/images/Non_Orig_Kills_In_Round.svg?react";
+import DefuserIcon from "./../assets/images/Non_Orig_Defuser.svg?react";
+import BombIcon from "./../assets/images/Non_Orig_Defuser.svg?react";
 
 export {
+    CrosshairIcon,
+    HealthIcon,
+    PlayerNumberIcon,
+    DeathIcon,
+    ObservedIcon,
     SmallBomb,
     ArmorFull,
     ArmorHalf,
@@ -57,5 +70,8 @@ export {
     Timer,
     LogoCT,
     LogoT,
+    KirIcon,
+    DefuserIcon,
+    BombIcon
 }
     

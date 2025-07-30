@@ -1,10 +1,10 @@
 import React from "react";
 import { ArmorFull, ArmorHelmet } from "./../../assets/Icons";
 
-const Armor = ({ health, armor, helmet }: { health: number, armor: number, helmet: boolean }) => {
+const Armor = ({ health, armor, helmet, className }: { health: number, armor: number, helmet: boolean, className: string }) => {
   if (!health || !armor) return null;
   return (
-    <div className={`armor_indicator`}>
+    <div className={`${className}`}>
       {helmet ? <ArmorHelmet /> : <ArmorFull />}
     </div>
   );

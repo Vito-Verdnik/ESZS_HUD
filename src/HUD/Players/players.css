@@ -1,0 +1,23 @@
+.teambox {
+  position: fixed;
+  bottom: -2vw;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.75s;
+  align-items: center;
+  row-gap: 0.2vw;
+  height: fit-content;
+  width: fit-content;
+}
+.teambox.hide {
+  opacity: 0;
+}
+.teambox.left {
+  left: 2vw;
+}
+.teambox.right {
+  right: 2vw;
+}
+
+/*# sourceMappingURL=players.css.map */

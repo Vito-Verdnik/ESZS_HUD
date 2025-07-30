@@ -73,6 +73,7 @@ const Player = ({ player, isObserved }: IProps) => {
   const primary = weapons.filter(weapon => !['C4', 'Pistol', 'Knife', 'Grenade', undefined].includes(weapon.type))[0] || null;
   const secondary = weapons.filter(weapon => weapon.type === "Pistol")[0] || null;
   const grenades = weapons.filter(weapon => weapon.type === "Grenade");
+
   const isLeft = player.team.orientation === "left";
 
   const zeus = weapons.find(weapon => weapon.name === "taser");

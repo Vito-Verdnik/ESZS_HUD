@@ -93,7 +93,7 @@
                 height: 100%;
                 padding-top: 2px;
             }
-            
+
             .icon {
                 display: flex;
                 width: 30px;
@@ -135,7 +135,7 @@
             align-items: center;
             width: 140px;
             justify-content: center;
-        
+
         }
         .username_container {
             height: 100%;
@@ -149,15 +149,15 @@
                 color: rgba(255, 255, 255, 0.5);
             }
         }
-        .weapon.grenade {
-            height: 28px;
-            /*filter: invert(1);*/
+        //.weapon.grenade {
+        //    height: 28px;
+        //    /*filter: invert(1);*/
+        //
+        //    &:last-child {
+        //        margin-right: 5px;
+        //    }
+        //}
 
-            &:last-child {
-                margin-right: 5px;
-            }
-        }
-        
     }
     .sidebar {
         width: 10px;
@@ -189,7 +189,7 @@
             border-radius:50%;
         }
     }
-    
+
     &.T {
         border-bottom: 6px solid var(--color-new-t);
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {
@@ -225,7 +225,7 @@
                 fill: var(--color-new-ct);
             }
         }
-        
+
     }
 }
 

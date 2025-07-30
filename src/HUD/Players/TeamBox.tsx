@@ -1,4 +1,5 @@
 import Player from './Player'
+import Player2 from './../Player/Player2.tsx'
 import * as I from 'csgogsi';
 import './players.scss';
 
@@ -11,7 +12,7 @@ interface Props {
 const TeamBox = ({players, team, side, current}: Props) => {
   return (
     <div className={`teambox ${team.side} ${side}`}>
-      {players.map(player => <Player
+      {players.map(player => <Player2
         key={player.steamid}
         player={player}
         isObserved={!!(current && current.steamid === player.steamid)}

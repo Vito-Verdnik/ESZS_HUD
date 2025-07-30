@@ -1,16 +1,28 @@
 @import '../../App.css';
 .player-div{
-    position: fixed;
 
     width: 19.5vw;
     height: 4.8vw;
     transform: translateY(-50%);
+    flex-shrink: 0;
+    flex-grow: 0;
 
 }
 
 
 
+.weapon.active{
+    fill: rgba(255, 255,255, 1.0);
+    filter: drop-shadow( 0vw 0vw 0.2vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0.2vw 0vw 0vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0vw 0.2vw 0vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0vw 0vw -0.2vw rgba(255, 255, 255, 0.2))
+    drop-shadow( -0.2vw 0vw 0vw rgba(255, 255, 255, 0.2))
+    drop-shadow( 0vw -0.2vw 0vw rgba(255, 255, 255, 0.2))
+    brightness(100);
 
+
+}
 
 .player-main-div{
     position: absolute;
@@ -20,7 +32,7 @@
     width: 19.5vw;
     height: 4.8vw;
     background-color: rgba(var(--BACKGROUND_COLOR), 0.78);
-    /*background-image: url('../assets/images/ESZS_Pattern_Opacity.png');*/
+    background-image: url("./../../assets/ESZS_Pattern_Opacity.png");
     background-repeat: repeat;
     background-size: 40%;
     border-radius: 0.83vw;
@@ -37,7 +49,7 @@
     right: 0;
 }
 
-.player-main-div.observed{
+.player-main-div.observed-player{
     outline: 0.15vw rgba(255,255,255, 1) solid;
 }
 .player-main-div.dead{
@@ -116,7 +128,7 @@
     margin-top: 0.15vw;
     height: 85%;
     width: auto;
-    fill: white;
+    fill: rgba(255, 255, 255, 0.7);
     flex-shrink: 0;
     flex-grow: 0;
 
@@ -148,6 +160,12 @@
 
     height: 70%;
     width: auto;
+}
+
+.player-middle-armor-icon svg{
+    height: 100%;
+    width: auto;
+
 }
 
 .player-middle-armor-icon.ct{
@@ -578,4 +596,29 @@ aspect-ratio: 1;
 .player-observed-icon{
 height: 100%;
 width: auto;
+}
+
+.player-defuser-div, .player-bomb-div{
+    position: absolute;
+    top: 6%;
+
+    width: 14%;
+    aspect-ratio: 1;
+}
+
+.player-defuser-icon{
+    height: 100%;
+    width: auto;
+}
+.player-bomb-icon{
+    height: 100%;
+    width: auto;
+}
+
+.player-defuser-div.l, .player-bomb-div.l{
+    right: -6%
+}
+.player-defuser-div.r, .player-bomb-div.r{
+    left: -6%;
+    transform: scaleX(-1);
 }
