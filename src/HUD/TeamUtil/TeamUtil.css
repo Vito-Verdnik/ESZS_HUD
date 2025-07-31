@@ -1,0 +1,120 @@
+@import '../../App.css';
+
+
+
+
+.team-util-div {
+    box-sizing: border-box;
+    position: fixed;
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.88);
+    top: 28.3vw;
+    width: 12.1vw;
+    height: 2.55vw;
+    border-radius: 0.9vw;
+    outline: 0.07vw rgba(255,255,255, 0.2) solid;
+    padding: 0.5vw;
+    z-index: -1;
+}
+
+
+
+.team-util-div.left.show{
+    left:5.5vw;
+    transition: left 0.3s ease;
+}
+.team-util-div.left.hide{
+    left:-15vw;
+    transition: left 0.3s ease;
+}
+.team-util-div.right.show{
+    right:5.5vw;
+    transition: right 0.3s ease;
+}
+.team-util-div.right.hide{
+    right:-15vw;
+    transition: right 0.3s ease;
+}
+
+
+/* =============================================================== */
+.featured-equipment {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8vw;
+    fill: rgba(255, 255, 255, 0.7);
+}
+
+.featured-equipment-flashbang{
+    height: 95%;
+    width: auto;
+
+    fill: rgba(255, 255, 255, 100);
+}
+
+.featured-equipment-smokegrenade{
+    height: 95%;
+    width: auto;
+    fill: rgba(255, 255, 255,100);
+}
+
+.featured-equipment-hegrenade{
+    height: 95%;
+    width: auto;
+    fill: rgba(255, 255, 255,100);
+}
+
+.featured-equipment-incgrenade{
+    height: 95%;
+    width: auto;
+    fill: rgba(255, 255, 255, 100);
+}
+
+.featured-equipment-molotov{
+    height: 95%;
+    width: auto;
+    fill: rgba(255, 255, 255, 100);
+}
+/* ADD MOLOTOV */
+
+.featured-equipment-flashbang, .featured-equipment-smokegrenade, .featured-equipment-hegrenade, .featured-equipment-incgrenade, .featured-equipment-molotov{
+    order: 1;
+}
+
+.number-flashbang, .number-smokegrenade, .number-hegrenade, .number-incgrenade, .number-molotov{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    font-size: 1.3vw;
+    color: white;
+    text-align: center;
+    margin-top: 0.15vw;
+
+
+    order: 0;
+
+}
+
+.featured-equipment-flashbang-div, .featured-equipment-smokegrenade-div, .featured-equipment-hegrenade-div, .featured-equipment-incgrenade-div, .featured-equipment-molotov-div{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.15vw;
+
+}
+
+.featured-equipment-flashbang-div{
+    order: 4
+}
+.featured-equipment-smokegrenade-div{
+    order: 1
+}
+.featured-equipment-hegrenade-div{
+    order: 2
+}
+.featured-equipment-incgrenade-div, .featured-equipment-molotov-div{
+    order: 0
+}
