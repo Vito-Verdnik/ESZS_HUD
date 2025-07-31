@@ -1,0 +1,134 @@
+@import '../../App.css';
+
+
+
+.veto-main-div{
+    position: fixed;
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.88);
+    top: 0;
+    left: 0.7%;
+    width: 20.1vw;
+    height: 3.15vw;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0 0 0.5vw 0.5vw;
+}
+
+.veto-div{
+    height: 90%;
+    width: fit-content;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1vw;
+    margin-top: 0.4vw;
+}
+
+
+
+.veto-image{
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 50%;
+    width: auto;
+    margin-right: 0.2vw;
+
+
+}
+
+
+.veto-text{
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: auto;
+
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.veto-picked-by{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: rgba(255, 255, 255, 100);
+    text-align: left;
+    font-size: 0.5vw;
+}
+
+
+.veto-team{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: rgba(255, 255, 255, 0.62);
+    text-align: left;
+    font-size: 0.5vw;
+}
+
+
+.veto-score{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 0.1vw;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.veto-score-right{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: rgba(255, 255, 255, 0.62);
+    text-align: left;
+    font-size: 0.8vw;
+}
+
+.veto-score-left{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: rgba(255, 255, 255, 0.62);
+    text-align: right;
+    font-size: 0.8vw;
+}
+
+.veto-score-center{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: rgba(255, 255, 255, 0.62);
+    text-align: center;
+    font-size: 0.8vw;
+    margin-bottom: 0.1vw;
+}
+
+
+.veto-picked-by-decider{
+    font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
+    color: rgba(255, 255, 255, 100);
+    text-align: left;
+    font-size: 0.5vw;
+    margin-top: 0.3vw;
+}
+
+.veto-picked-by-decider.nothin{
+    font-size: 0.7vw;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.veto-text-decider{
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: auto;
+
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.2vw;
+}
+
+.veto-text-decider.nothin{
+    justify-content: center;
+    margin-bottom: 9%;
+}

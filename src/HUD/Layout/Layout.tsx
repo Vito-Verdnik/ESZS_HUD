@@ -1,5 +1,7 @@
 import { useState } from "react";
 import TeamBox from "./../Players/TeamBox";
+import Veto2 from "./../Veto/Veto2";
+import Sponsor from "./../Sponsor/Sponsor";
 import MatchBar from "../MatchBar/MatchBar";
 import SeriesBox from "../MatchBar/SeriesBox";
 import Observed from "./../Players/Observed";
@@ -64,7 +66,8 @@ const Layout = ({game, match}: Props) => {
       </div>*/}
       {/*<Killfeed />*/}
       {/*<Overview match={match} map={game.map} players={game.players || []} /> THIS IS  UPCOMING MATCH*/}
-      {/*<RadarMaps match={match} map={game.map} game={game} />*/}  {/*RADAR THAT ALSO HAS MAP VETO PICKED MAPS UP TOP*/}
+      {/*<RadarMaps match={match} map={game.map} game={game} />  RADAR THAT ALSO HAS MAP VETO PICKED MAPS UP TOP*/}
+        <Veto2 match={match} map={game.map} game={game} />
       {/*<MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />*/}
         <Scoreboard match={match} map={game.map} phase={game.phase_countdowns} bomb={game.bomb} />
 {/*      <Pause  phase={game.phase_countdowns}/>
@@ -74,11 +77,11 @@ const Layout = ({game, match}: Props) => {
       {/*<Tournament />*/} {/*THIS IS A POPUP FOR THE TOURNAMENT NAME*/}
 
         <Featured player={game.player}/> {/*THIS IS FEATURED PLAYER*/}
-
+        <Sponsor />
       <TeamBox team={left} players={leftPlayers} side="left" current={game.player} />
       <TeamBox team={right} players={rightPlayers} side="right" current={game.player} />  {/*THESE ARE ALL OF THE PLAYER BOXES FROM ONE SIDE*/}
 
-      <Trivia />
+      {/*<Trivia />*/}
       {/*<Scout left={left.side} right={right.side} />*/} {/*TODO: WHAT IS THIS*/}
       {/*<MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />*/}   {/*THIS IS FULL MAP VETO*/}
       <div className={"boxes left"}>

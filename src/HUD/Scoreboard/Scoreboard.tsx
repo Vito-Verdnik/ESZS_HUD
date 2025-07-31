@@ -10,9 +10,9 @@ import * as B from './../../API/types';
 import {LogoCT, LogoT} from "../../assets/Icons.tsx";
 import TeamLogo2 from "./TeamLogo2.tsx";
 import api, { apiUrl } from './../../API';
-import { useAction } from '../../API/contexts/actions';
 import { useEffect, useState } from 'react';
 import SDP_LOGO from '../../assets/SDP24-25.png'
+import { useAction, useConfig } from '../../API/contexts/actions';
 
 function stringToClock(time: string | number, pad = true) {
     if (typeof time === "string") {
@@ -46,6 +46,24 @@ const getRoundLabel = (mapRound: number) => {
 
 
 export default function Scoreboard(props: IProps) {
+
+    const [ show, setShow ] = useState(false);
+
+    const data = useConfig('trivia');
+
+    useAction('triviaState', (state) => {
+        setShow(state === "show");
+    });
+    let stage = 'GRAND FINALE'
+    if(data?.title){
+        stage = data?.title.toUpperCase();
+    }
+
+
+
+
+
+
 
 
     const [ teams, setTeams ] = useState<B.Team[]>([]);
@@ -90,7 +108,7 @@ export default function Scoreboard(props: IProps) {
     let boRight = right.matches_won_this_series;
     let time = phase?.phase_ends_in ? stringToClock(phase.phase_ends_in) : "0:00";
     let round = getRoundLabel(map.round);
-    let stage = 'GRAND FINALE'
+
     let nameLeft = left.name;
     let nameRight = right.name;
     let sideLeft = left.side.toLowerCase();
@@ -142,8 +160,8 @@ export default function Scoreboard(props: IProps) {
             {/*TODO: WAIT FOR LHM TO FIX THEIR STUFF {isTournamentLogo && tournament.logo && <img className='tournament-logo' src={`data:image/jpeg;base64,${tournament.logo}`} alt={tournament.name} />}*/}
             <img className='tournament-logo' src={SDP_LOGO} />
 
-            <div className='scoreboard-stage-div'>
-                <span className='scoreboard-stage-text'>{stage}</span>
+            <div className={`scoreboard-stage-div ${show ? 'show': 'hide'}`}>
+                <span className={`scoreboard-stage-text ${show ? 'show': 'hide'}`}>{stage}</span>
             </div>
             <div className={`scoreboard-side left ${sideLeft}`}> </div>
             <div className={`scoreboard-side right ${sideRight}`}> </div>

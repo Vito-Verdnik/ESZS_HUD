@@ -1,0 +1,23 @@
+@import '../../App.css';
+
+.sponsor-div {
+    box-sizing: border-box;
+    position: fixed;
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.68);
+    border-radius: 0.5vw;
+    top: 1.2%;
+    right: 0.7%;
+    width: 14.2vw;
+    height: 3.8vw;
+    display: flex;
+    padding: 0.9vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sponsor-image {
+    width: auto;
+    height: 100%;
+}
