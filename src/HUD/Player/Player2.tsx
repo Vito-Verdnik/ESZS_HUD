@@ -96,7 +96,10 @@ const Player2 = ({ player, isObserved }: IProps) => {
     let hp = player.state.health;
     let kills = player.stats.kills;
     let deaths = player.stats.deaths;
+    deaths = 11;
+    kills = 11;
     let name = player.name;
+
     let money = player.state.money;
     let playerNumber = player.observer_slot;
     let dmg = player.state.round_totaldmg;

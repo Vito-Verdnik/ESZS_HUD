@@ -6,7 +6,7 @@
     position: fixed;
     background-color: rgba(var(--BACKGROUND_COLOR), 0.88);
     top: 0;
-    left: 0.7%;
+    left: 2%;
     width: 20.1vw;
     height: 3.15vw;
     display: flex;

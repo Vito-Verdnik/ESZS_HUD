@@ -29,7 +29,8 @@
     top: 0;
 
 
-    width: 19.5vw;
+    /*width: 19.5vw;*/
+    width: 15.5vw;
     height: 4.8vw;
     background-color: rgba(var(--BACKGROUND_COLOR), 0.78);
     background-image: url("./../../assets/ESZS_Pattern_Opacity.png");
@@ -55,6 +56,7 @@
 .player-main-div.dead{
     background-color: rgba(var(--BACKGROUND_COLOR), 0.42);
     width: 11.5vw;
+    transition: width 0.2s ease-in-out;
 }
 .player-top-div{
     background-color: rgba(var(--BACKGROUND_COLOR), 0.8);
@@ -183,7 +185,7 @@
 
    fill: rgba(var(--T_COLOR), 1.0);
 }
-.player-middle-armor-icon.r{left: 95%;}
+
 
 .player-middle-kills{
     display: flex;
@@ -205,7 +207,7 @@
 }
 .player-middle-kills.r{
 
-    right: 28%;
+    right: 30.5%;
 }
 
 .player-middle-kills.dead.l{
@@ -240,6 +242,7 @@
     margin-top: 0.4vh;
     text-align: left;
     font-family: 'MonumentExtended-Regular', "Comic Sans MS", sans-serif;
+    /*font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;*/
     font-size: 1.1vw;
 
     height: fit-content;
@@ -276,7 +279,7 @@
 
 .player-middle-deaths.l{
 
-    left: 28%;
+    left: 31%;
 }
 .player-middle-deaths.r{
     right: 11%;
@@ -319,10 +322,10 @@ top: 50%;
 transform: translate(-50%, -50%);
 }
 .player-middle-kir-container.l{
-left: 47%;
+left: 53.5%;
 }
 .player-middle-kir-container.r{
-left: 53%;
+left: 46.5%;
 }
 
 .player-middle-kir-container.dead.l{
@@ -616,9 +619,9 @@ width: auto;
 }
 
 .player-defuser-div.l, .player-bomb-div.l{
-    right: -6%
+    right: 15%
 }
 .player-defuser-div.r, .player-bomb-div.r{
-    left: -6%;
+    left: 15%;
     transform: scaleX(-1);
 }

@@ -7,7 +7,7 @@
     box-sizing: border-box;
     position: fixed;
     background-color: rgba(var(--BACKGROUND_COLOR), 0.88);
-    top: 28.3vw;
+    top: 48%;
     width: 12.1vw;
     height: 2.55vw;
     border-radius: 0.9vw;
@@ -19,7 +19,7 @@
 
 
 .team-util-div.left.show{
-    left:5.5vw;
+    left:3.5vw;
     transition: left 0.3s ease;
 }
 .team-util-div.left.hide{
@@ -27,7 +27,7 @@
     transition: left 0.3s ease;
 }
 .team-util-div.right.show{
-    right:5.5vw;
+    right:3.5vw;
     transition: right 0.3s ease;
 }
 .team-util-div.right.hide{
