@@ -45,6 +45,10 @@ code {
   font-family: 'Poppins-Bold';
   src: local('Poppins-Bold'), url('./fonts/Poppins-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Stratum';
+  src: local('Stratum'), url('./fonts/stratum-no1-3.otf') format('opentype');
+}
 
 :root {
   --main-panel-color: rgba(12, 15, 18, 0.85);

@@ -3,7 +3,7 @@
 
 .scoreboard-div {
     position: fixed;
-    top: 2%;
+    top: 0.5%;
     left: 50%;
     transform: translateX(-50%);
     width: 31VW;
@@ -226,9 +226,10 @@
     border-radius: 1vw;
     background-color: red;
     position: absolute;
-    bottom: -7%;
+    top: 31%;
     transform: translateX(-50%);
     z-index: -1;
+    transition: height 0.3s ease;
 }
 
 .scoreboard-side.left{
@@ -245,4 +246,43 @@
 
 .scoreboard-side.t{
     background-color: rgba(var(--T_COLOR), 1.0);
+}
+
+.scoreboard-c4-icon{
+    position: absolute;
+    transform: translateX(-50%);
+    top: 48%;
+    left: 50%;
+    fill: white;
+    width: 1.9vw;
+    height: auto;
+    z-index: 3;
+    animation: blink-red 3s infinite;
+
+}
+
+@keyframes blink-red {
+    0% { fill: white; }
+    10% { fill: red; }
+    20% { fill: white; }
+    100% { fill: white; }
+}
+
+
+.scoreboard-side.left.win, .scoreboard-side.right.win{
+    height: 6vw;
+    transition: height 0.3s ease;
+}
+
+.scoreboard-side-win-text{
+    transform: translateX(-50%);
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    font-family: poppins-bold, "Comic Sans MS", sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 1vw;
+    bottom: 5%;
+    left: 50%;
 }

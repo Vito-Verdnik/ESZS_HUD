@@ -96,8 +96,7 @@ const Player2 = ({ player, isObserved }: IProps) => {
     let hp = player.state.health;
     let kills = player.stats.kills;
     let deaths = player.stats.deaths;
-    deaths = 11;
-    kills = 11;
+
     let name = player.name;
 
     let money = player.state.money;
@@ -128,7 +127,9 @@ const Player2 = ({ player, isObserved }: IProps) => {
                     <span className={`player-top-name ${position}  ${side} ${!alive ? 'dead' : ''}`}>{name}</span>
                     {/*{alive && (<Ak47 className={`player-top-primary ${position} ${side}`}/>)}  DONE */}
                     {(alive && primary) && <Weapon  className={`player-top-primary ${position} ${side}`}   weapon={primary.name} active={primary.state === "active"} />}
-                    {(alive && secondaryAsPrimary) && <Weapon  className={`player-top-primary ${position} ${side}`}   weapon={secondary.name} active={secondary.state === "active"} />}
+                    {(alive && secondaryAsPrimary) && secondary !== null &&
+                        <Weapon className={`player-top-primary ${position} ${side}`} weapon={secondary.name}
+                                active={secondary.state === "active"}/>}
                     {(!alive && !primary && !secondary) && <div className={`player-top-primary ${position} ${side}`}/>}
 
                 </div>
@@ -155,6 +156,7 @@ const Player2 = ({ player, isObserved }: IProps) => {
 
                 <div className={`player-bottom-div ${position} ${side} ${!alive ? 'dead' : ''}`}>
                     {alive && (<div className={`player-bottom-bar ${position} ${side}`} style={{width: `${hp}%`}}/>)}
+                    {alive && (<div className={`player-bottom-bar-later ${position}`} style={{width: `${hp}%`}}/>)}
                     {alive && (<div className={`player-bottom-hp ${position} ${side}`}>
                           <HealthIcon className='player-bottom-hp-icon'/>
                         <span className={`player-bottom-hp-text ${position} ${side}`}>{hp}</span>
@@ -190,7 +192,7 @@ const Player2 = ({ player, isObserved }: IProps) => {
 
 
         </div>
-/*        TODO: Damaged hp bar animation, flashed indicator
+/*        TODO:, flashed indicator
           */
 
     )

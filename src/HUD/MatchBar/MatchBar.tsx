@@ -48,12 +48,13 @@ const Matchbar = (props: IProps) => {
     const time = stringToClock(phase.phase_ends_in);
     const left = map.team_ct.orientation === "left" ? map.team_ct : map.team_t;
     const right = map.team_ct.orientation === "left" ? map.team_t : map.team_ct;
-    const isPlanted = bomb && (bomb.state === "defusing" || bomb.state === "planted");
+    const isPlanted = bomb && (bomb.state === "defusing" || bomb.state === "planted"); //TODO: IMPORTNAT
     const bo = (match && Number(match.matchType.substr(-1))) || 0;
 
-    const bombData = useBombTimer();
-    const plantTimer: Timer | null = bombData.state === "planting" ? { time:bombData.plantTime, active: true, side: bombData.player?.team.orientation || "right", player: bombData.player, type: "planting"} : null;
-    const defuseTimer: Timer | null = bombData.state === "defusing" ? { time:bombData.defuseTime, active: true, side: bombData.player?.team.orientation || "left", player: bombData.player, type: "defusing"} : null;
+    const bombData = useBombTimer(); //TODO: IMPORTANT
+
+    const plantTimer: Timer | null = bombData.state === "planting" ? { time:bombData.plantTime, active: true, side: bombData.player?.team.orientation || "right", player: bombData.player, type: "planting"} : null;  //TODO: IMPORTANT
+    const defuseTimer: Timer | null = bombData.state === "defusing" ? { time:bombData.defuseTime, active: true, side: bombData.player?.team.orientation || "left", player: bombData.player, type: "defusing"} : null; //TODO: IMPORTANT
 
     return (
       <>

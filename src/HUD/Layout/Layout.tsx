@@ -23,6 +23,8 @@ import { Scout } from "../Scout";
 import Featured from "../Featured/Featured.tsx";
 import Scoreboard from "../Scoreboard/Scoreboard.tsx";
 import TeamUtil from "../TeamUtil/TeamUtil";
+import BombAnimation from "../BombIndicator/BombAnimation.tsx";
+import BombProgress from "../BombIndicator/BombProgress.tsx";
 
 interface Props {
   game: CSGO,
@@ -68,11 +70,11 @@ const Layout = ({game, match}: Props) => {
           <div className={`team_counter ${right.side}`}>{rightPlayers.filter(player => player.state.health > 0).length}</div>
         </div>
       </div>*/}
-      {/*<Killfeed />*/}
+      <Killfeed />
       {/*<Overview match={match} map={game.map} players={game.players || []} /> THIS IS  UPCOMING MATCH*/}
       {/*<RadarMaps match={match} map={game.map} game={game} />  RADAR THAT ALSO HAS MAP VETO PICKED MAPS UP TOP*/}
 
-      {/*<MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />*/}
+        {/*<MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />*/}
 
 {/*      <Pause  phase={game.phase_countdowns}/>
       <Timeout map={game.map} phase={game.phase_countdowns} />
@@ -83,6 +85,8 @@ const Layout = ({game, match}: Props) => {
         <Veto2 match={match} map={game.map} game={game} />
         <Featured player={game.player}/> {/*THIS IS FEATURED PLAYER*/}
         <Sponsor />
+       {/* <BombAnimation />
+        <BombProgress />*/}
       <TeamBox team={left} players={leftPlayers} side="left" current={game.player} />
       <TeamBox team={right} players={rightPlayers} side="right" current={game.player} />  {/*THESE ARE ALL OF THE PLAYER BOXES FROM ONE SIDE*/}
         <TeamUtil position={"left"} show={isTeamUtil && !forceHide} side={left.side} players={game.players} />  {/*TODO: MAKE IT SO THE SHOWBOXES BUTTONS HAS A BUTTON CALLED AUTOMATED BEHAVIOUR*/}

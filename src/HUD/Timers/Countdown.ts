@@ -70,8 +70,6 @@ export const useBombTimer = () => {
 
 
     }, []);
-
-
     return ({
         state: bombState,
         player,
@@ -79,5 +77,6 @@ export const useBombTimer = () => {
         defuseTime,
         bombTime,
         plantTime
+
     })
 }

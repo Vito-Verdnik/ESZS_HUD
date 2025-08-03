@@ -1,0 +1,37 @@
+@import '../../App.css';
+
+
+.defuse-progress-container {
+    position: fixed;
+    top: 137%;
+    left: 50%;
+    border-radius: 0.2vw;
+    height: 0.7vw;
+    width: 14vw;
+    transform: translate(-50%, -50%);
+    background-color: rgb(27, 75, 80);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    show: hidden;
+    z-index: 1;
+}
+
+
+.defuse-progress-bar{
+    position: absolute;
+    left: 50%;
+
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%);
+
+    background-color: rgb(var(--CT_COLOR));
+
+}
+
+.defuse-progress-container.live{
+    opacity: 100;
+    show: visible;
+    transition: opacity 0.3s;
+}

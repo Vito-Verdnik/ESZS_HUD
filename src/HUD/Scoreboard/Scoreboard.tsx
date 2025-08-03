@@ -13,6 +13,12 @@ import api, { apiUrl } from './../../API';
 import { useEffect, useState } from 'react';
 import SDP_LOGO from '../../assets/SDP24-25.png'
 import { useAction, useConfig } from '../../API/contexts/actions';
+import { useBombTimer } from "./../Timers/Countdown";
+import BombAnimation from "../BombIndicator/BombAnimation.tsx";
+import BombProgress from "../BombIndicator/BombProgress.tsx";
+import DefuseProgress from "../BombIndicator/DefuseProgress.tsx"
+import { C4 } from "./../../assets/Icons";
+import { onGSI } from "../../API/contexts/actions";
 
 function stringToClock(time: string | number, pad = true) {
     if (typeof time === "string") {
@@ -32,6 +38,14 @@ interface IProps {
     map: I.Map;
     phase: I.CSGO["phase_countdowns"],
     bomb: I.Bomb | null,
+}
+
+export interface Timer {
+    time: number;
+    active: boolean;
+    side: "left"|"right";
+    type: "defusing" | "planting";
+    player: I.Player | null;
 }
 
 const getRoundLabel = (mapRound: number) => {
@@ -118,6 +132,28 @@ export default function Scoreboard(props: IProps) {
     let sideRight = right.side.toLowerCase();
     const bo = (match && Number(match.matchType.substr(-1))) || 0;
 
+    const bombData = useBombTimer();
+
+
+
+    const [ showWinLeft, setShowWinLeft ] = useState(false);
+    const [ showWinRight, setShowWinRight ] = useState(false);
+
+    onGSI("roundEnd", result => {
+        if(result.winner.orientation === "left"){
+            setShowWinLeft(true);
+
+            setTimeout(() => {
+                setShowWinLeft(false);
+            }, 5000);
+        } else {
+            setShowWinRight(true);
+
+            setTimeout(() => {
+                setShowWinRight(false);
+            }, 5000);
+        }
+    });
 
 
     return (
@@ -152,7 +188,8 @@ export default function Scoreboard(props: IProps) {
 
 
 
-                <span className='scoreboard-time'>{time}</span>
+                {(!(bomb?.state=== "planted" || bomb?.state === "defusing")) && <span className='scoreboard-time'>{time}</span>}
+                {((bomb?.state=== "planted" || bomb?.state === "defusing")) && <C4 className={"scoreboard-c4-icon"} />}
                 <span className='scoreboard-round'>{round}</span>
 
 
@@ -163,9 +200,15 @@ export default function Scoreboard(props: IProps) {
             <div className={`scoreboard-stage-div ${show ? 'show': 'hide'}`}>
                 <span className={`scoreboard-stage-text ${show ? 'show': 'hide'}`}>{stage}</span>
             </div>
-            <div className={`scoreboard-side left ${sideLeft}`}> </div>
-            <div className={`scoreboard-side right ${sideRight}`}> </div>
-
+            <div className={`scoreboard-side left ${sideLeft} ${showWinLeft? "win" : ""}`}>
+                <span className={"scoreboard-side-win-text left"}>{shortLeft} wins the round!</span>
+            </div>
+            <div className={`scoreboard-side right ${sideRight} ${showWinRight? "win" : ""}`}>
+                <span className={"scoreboard-side-win-text left"}>{shortRight} wins the round!</span>
+            </div>
+            <BombAnimation />
+            <BombProgress state={bombData.state} bombTime={bombData.bombTime}/>
+            <DefuseProgress player={bombData.player} state={bombData.state} defuseTime={bombData.defuseTime} />
 
         </div>
     )

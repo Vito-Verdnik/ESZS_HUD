@@ -30,7 +30,7 @@
 .featured-div-main {
     position: absolute;
     bottom: 0;
-    background-color: rgba(var(--BACKGROUND_COLOR), 0.88);
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.95);
     background-image: url("./../../assets/ESZS_Pattern_Opacity.png");
     background-repeat: repeat;
     background-size: 40%;
@@ -188,10 +188,10 @@
     margin-top: 0.4vw;
 }
 .featured-main-bullets-text-slash.ct{
-    color: rgba(var(--CT_COLOR), 0.75);
+    color: rgba(var(--CT_COLOR), 0.85);
 }
 .featured-main-bullets-text-slash.t{
-    color: rgba(var(--T_COLOR), 0.75);
+    color: rgba(var(--T_COLOR), 0.85);
 }
 .featured-main-bullets-text-reserve{
     font-family: 'Poppins-Bold', "Comic Sans MS", sans-serif;
@@ -200,10 +200,10 @@
     margin-top: 0.6vw;
 }
 .featured-main-bullets-text-reserve.ct{
-    color: rgba(var(--CT_COLOR), 0.75);
+    color: rgba(var(--CT_COLOR), 0.85);
 }
 .featured-main-bullets-text-reserve.t{
-    color: rgba(var(--T_COLOR), 0.75);
+    color: rgba(var(--T_COLOR), 0.85);
 }
 
 .featured-main-kills-div {

@@ -34,7 +34,7 @@ import PlayerNumberIcon from "./../assets/images/SideNumber.svg?react";
 import ObservedIcon from "./../assets/images/Non_Orig_Observed.svg?react";
 import KirIcon from "./../assets/images/Non_Orig_Kills_In_Round.svg?react";
 import DefuserIcon from "./../assets/images/Non_Orig_Defuser.svg?react";
-import BombIcon from "./../assets/images/Non_Orig_Defuser.svg?react";
+import BombIcon from "./../assets/images/Defuser2.svg?react";
 import BulletIcon from "./../assets/images/Non-Orig-Bullet.svg?react";
 
 export {

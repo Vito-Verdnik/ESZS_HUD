@@ -1,0 +1,56 @@
+@import '../../App.css';
+
+.bomb-progress-container {
+    position: fixed;
+    top: 164%;
+    left: 50%;
+    border-radius: 0.2vw;
+    height: 1.5vw;
+    width: 7.5vw;
+    transform: translate(-50%, -50%);
+    background-color: rgb(77, 0, 0);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, top 0.2s 1s, width 0.2s 1s;
+    show: hidden;
+    z-index: 1; /* 1 */
+}
+
+.bomb-progress-bar{
+    position: absolute;
+    left: 50%;
+
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%);
+
+    background-color: red;
+
+}
+
+.bomb-progress-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'StratumNo1', "Comic Sans MS", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2vw;
+}
+
+.bomb-progress-container.live{
+    opacity: 100;
+    width: 14vw;
+    top: 115%;
+    show: visible;
+    transition:
+    opacity 1s 2s,  /* wait 5s, then animate opacity over 7s */
+    width 1s 2.7s,   /* wait 13s (5s + 7s + 1s), then animate width over 2s */
+    top 1s 2.7s ease-in-out;     /* wait 13s, then animate top over 1s */
+
+}
+    /*top 182% is the  animation location*/
+    /* top 115% is the scoreboard location*/
+    /* starting width is 7.5vw; */
+/* scoreboard width is 14vw */

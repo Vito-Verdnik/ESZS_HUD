@@ -32,7 +32,7 @@
     /*width: 19.5vw;*/
     width: 15.5vw;
     height: 4.8vw;
-    background-color: rgba(var(--BACKGROUND_COLOR), 0.78);
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.9);
     background-image: url("./../../assets/ESZS_Pattern_Opacity.png");
     background-repeat: repeat;
     background-size: 40%;
@@ -54,7 +54,7 @@
     outline: 0.15vw rgba(255,255,255, 1) solid;
 }
 .player-main-div.dead{
-    background-color: rgba(var(--BACKGROUND_COLOR), 0.42);
+    background-color: rgba(var(--BACKGROUND_COLOR), 0.6);
     width: 11.5vw;
     transition: width 0.2s ease-in-out;
 }
@@ -232,10 +232,10 @@
     fill: rgba(var(--T_COLOR), 1.0);
 }
 .player-middle-kills-icon.dead.ct{
-    fill: rgba(var(--CT_COLOR), 0.73);
+    fill: rgba(var(--CT_COLOR), 0.9);
 }
 .player-middle-kills-icon.dead.t{
-    fill: rgba(var(--T_COLOR), 0.73);
+    fill: rgba(var(--T_COLOR), 0.9);
 }
 
 .player-middle-kills-count, .player-middle-deaths-count{
@@ -257,10 +257,10 @@
     color: rgba(var(--T_COLOR), 1.0);
 }
 .player-middle-kills-count.dead.ct, .player-middle-deaths-count.dead.ct{
-    color: rgba(var(--CT_COLOR), 0.73);
+    color: rgba(var(--CT_COLOR), 0.9);
 }
 .player-middle-kills-count.dead.t, .player-middle-deaths-count.dead.t{
-    color: rgba(var(--T_COLOR), 0.73);
+    color: rgba(var(--T_COLOR), 0.9);
 }
 
 .player-middle-deaths{
@@ -307,10 +307,10 @@
 }
 
 .player-middle-deaths-icon.dead.ct{
-fill: rgba(var(--CT_COLOR), 0.73);
+fill: rgba(var(--CT_COLOR), 0.9);
 }
 .player-middle-deaths-icon.dead.t{
- fill: rgba(var(--T_COLOR), 0.73);
+ fill: rgba(var(--T_COLOR), 0.9);
 }
 
 .player-middle-kir-container{
@@ -420,6 +420,25 @@ left: 0;
 .player-bottom-bar.r{
 right: 0;
 }
+.player-bottom-bar-later{
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    transition: width 0.2s 1s;
+}
+
+.player-bottom-bar-later.l{
+    left: 0;
+}
+
+.player-bottom-bar-later.r{
+    right: 0;
+}
 
 .player-bottom-money{
 
@@ -468,7 +487,7 @@ text-align: right;
 text-align: left
 }
 .player-bottom-money-text.dead{
-color: rgba(255,255,255, 0.6);
+color: rgba(255,255,255, 0.85);
 }
 
 .player-bottom-hp-icon{
@@ -523,7 +542,7 @@ gap: 0.2vw;
 }
 .player-bottom-dmg-container.ct{
 
-    color: rgba(var(--CT_COLOR), 0.73);
+    color: rgba(var(--CT_COLOR), 0.9);
 }
 .player-bottom-dmg-container.l{
 right: 2%;
@@ -537,7 +556,7 @@ padding-left: 0.4vw;
 }
 .player-bottom-dmg-container.t{
 
-    color: rgba(var(--T_COLOR), 0.73);
+    color: rgba(var(--T_COLOR), 0.9);
 }
 
 .player-bottom-dmg{
@@ -614,14 +633,18 @@ width: auto;
     width: auto;
 }
 .player-bomb-icon{
-    height: 100%;
+    padding-top: 15%;
+    height: 55%;
     width: auto;
 }
 
-.player-defuser-div.l, .player-bomb-div.l{
+.player-defuser-div.l{
     right: 15%
 }
-.player-defuser-div.r, .player-bomb-div.r{
+
+.player-bomb-div.r{transform: scaleX(-1); left: 11%}
+.player-bomb-div.l{} /*TODO: WRITE THE CORRECT VALUE*/
+.player-defuser-div.r{
     left: 15%;
-    transform: scaleX(-1);
+
 }
