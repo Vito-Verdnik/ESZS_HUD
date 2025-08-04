@@ -96,6 +96,3 @@ export default function Featured({ player }: { player: Player | null }) {
 
     )
 }
-
-//TODO: HP bar red animation
-//TODO: KIR div gets animated up

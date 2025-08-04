@@ -22,9 +22,7 @@ export default function Veto2({ match, map }: Props) {
     }
     let leftTeamID = match.left.id;
     let rightTeamID = match.right.id;
-    let bool1 = false;
-    let bool2 = false;
-    let bool3 = false;
+
     let matches = (match.vetos.filter(veto => veto.type !== "ban").filter(veto => veto.teamId || veto.type === "decider"));
     const indexDone: number[] = [];
     const indexNotDone: number[] = [];

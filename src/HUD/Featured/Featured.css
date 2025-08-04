@@ -317,17 +317,17 @@
     align-items: center;
     justify-content: center;
     top: 0;
-    left: 25.75%; /* Change from 7% to 50% */
-    transform: translateX(-50%); /* Add this to center horizontally */
+    left: 25.75%;
+    transform: translateX(-50%);
     height: 1.6vw;
     background-color: rgba(var(--BACKGROUND_COLOR), 0.9);
     max-width: 11.6vw;
-    min-width: 5vw; /* Add minimum width */
+    min-width: 5vw;
     overflow: hidden;
     border-radius: 0.8vw 0.8vw 0 0;
     padding-left: 1.42vw;
     padding-right: 1.42vw;
-    transform-origin: center center; /* Add this to make it expand from center */
+    transform-origin: center center;
     z-index: -2;
 }
 

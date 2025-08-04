@@ -24,7 +24,7 @@ export default function BombAnimation() {
         videoRef.current?.play();
     }
 
-/*&& (bombData.state !== "planting") && (bombData.state !== "planted") && videoRef.current && videoRef.current.currentTime != 0)*/
+
     if(bombData.plantTime > 2.95 && bombData.plantTime < 3 && videoRef.current && videoRef.current.currentTime !=0){
         resetIt();
         playIt = false;

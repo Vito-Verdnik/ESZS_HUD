@@ -1,4 +1,4 @@
-import Player from './Player'
+
 import Player2 from './../Player/Player2.tsx'
 import * as I from 'csgogsi';
 import './players.scss';

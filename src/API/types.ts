@@ -18,20 +18,7 @@ export interface Team {
   logo: string;
   extra: Record<string, string>;
 }
-/*
-export interface HUD {
-    name: string,
-    version: string,
-    author: string,
-    legacy: boolean,
-    dir: string
-}
- 
-export interface Config {
-    port: number,
-    steamApiKey: string,
-    token: string,
-}*/
+
 export interface TournamentMatchup {
   _id: string;
   loser_to: string | null; // IDs of Matchups, not Matches

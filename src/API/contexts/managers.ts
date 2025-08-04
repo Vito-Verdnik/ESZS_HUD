@@ -6,8 +6,6 @@ export default class ActionManager {
     constructor(){
         this.handlers = {}
 
-        /*this.on('data', _data => {
-        });*/
     }
     execute = <T = any>(eventName: string, argument?: T) => {
         const handlers = this.handlers[eventName] || [];
@@ -38,13 +36,7 @@ export class ConfigManager {
         this.data = data;
         this.execute();
 
-        /*const listeners = this.listeners.get(eventName);
-        if(!listeners) return false;
-        listeners.forEach(callback => {
-            if(argument) callback(argument);
-            else callback();
-        });
-        return true;*/
+
     }
 
     execute(){

@@ -13,7 +13,7 @@
     opacity: 0;
     transition: opacity 0.3s, top 0.2s 1s, width 0.2s 1s;
     show: hidden;
-    z-index: 1; /* 1 */
+    z-index: 1;
 }
 
 .bomb-progress-bar{
@@ -45,12 +45,8 @@
     top: 115%;
     show: visible;
     transition:
-    opacity 1s 2s,  /* wait 5s, then animate opacity over 7s */
-    width 1s 2.7s,   /* wait 13s (5s + 7s + 1s), then animate width over 2s */
-    top 1s 2.7s ease-in-out;     /* wait 13s, then animate top over 1s */
+    opacity 1s 2s,
+    width 1s 2.7s,
+    top 1s 2.7s ease-in-out;
 
 }
-    /*top 182% is the  animation location*/
-    /* top 115% is the scoreboard location*/
-    /* starting width is 7.5vw; */
-/* scoreboard width is 14vw */

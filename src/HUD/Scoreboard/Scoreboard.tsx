@@ -1,13 +1,9 @@
 import React from 'react';
 import './Scoreboard.css'
-/*import SF_LOGO from '../../../../../BASIC HUD/basic-hud/src/assets/images/SF_Logo.png'
-import TS_LOGO from '../../../../../BASIC HUD/basic-hud/src/assets/images/TS_Logo.png'
-import SDP_LOGO from '../../../../../BASIC HUD/basic-hud/src/assets/images/SDP_LOGO.png'*/
 import BesfOfScore from "./BesfOfScore.tsx";
 import { Match } from './../../API/types';
 import * as I from "csgogsi";
 import * as B from './../../API/types';
-import {LogoCT, LogoT} from "../../assets/Icons.tsx";
 import TeamLogo2 from "./TeamLogo2.tsx";
 import api, { apiUrl } from './../../API';
 import { useEffect, useState } from 'react';
@@ -63,9 +59,9 @@ export default function Scoreboard(props: IProps) {
 
     const [ show, setShow ] = useState(false);
 
-    const data = useConfig('trivia');
+    const data = useConfig('');
 
-    useAction('triviaState', (state) => {
+    useAction('stageState', (state) => {
         setShow(state === "show");
     });
     let stage = 'GRAND FINALE'
@@ -164,8 +160,6 @@ export default function Scoreboard(props: IProps) {
                     <span className='scoreboard-name-right'>{shortRight}</span>
 
 
-                    {/*<img src={SF_LOGO} className='scoreboard-logo-left'/>
-                    <img src={TS_LOGO} className='scoreboard-logo-right'/>*/}
                     <TeamLogo2 team={left} side={"left"} />
                     <TeamLogo2 team={right} side={"right"} />
 

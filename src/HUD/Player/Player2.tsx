@@ -1,9 +1,7 @@
 import './Player2.css'
-//import {Awp, Ak47, Deagle} from '../assets/Weapons.tsx'
-//import {HealthIcon, DeathIcon, CrosshairIcon, PlayerNumberIcon, ObservedIcon} from '../assets/Stats.tsx'
-//import {Armor} from '../assets/Equipment.tsx'
+
 import FeaturedKIR from "./../FeaturedKIR/FeaturedKIR.tsx"
-//import BetterEquipment from "./BetterEquipment.tsx"
+
 import * as I from "csgogsi";
 import Weapon from "./../Weapon/Weapon";
 import Armor from "./../Indicators/Armor";
@@ -16,8 +14,6 @@ import {
     DefuserIcon,
     BombIcon
 } from "./../../assets/Icons.tsx";
-import Bomb from "./../Indicators/Bomb";
-import Defuse from "./../Indicators/Defuse";
 import React from "react";
 import BetterEquipment from "../BetterEquipment/BetterEquipment.tsx";
 
@@ -125,7 +121,6 @@ const Player2 = ({ player, isObserved }: IProps) => {
             <div className={`player-main-div ${position} ${side} ${!alive ? 'dead' : ''} ${observed ? 'observed-player' : ''}`}>
                 <div className={`player-top-div ${position} ${side} ${!alive ? 'dead' : ''}`}>
                     <span className={`player-top-name ${position}  ${side} ${!alive ? 'dead' : ''}`}>{name}</span>
-                    {/*{alive && (<Ak47 className={`player-top-primary ${position} ${side}`}/>)}  DONE */}
                     {(alive && primary) && <Weapon  className={`player-top-primary ${position} ${side}`}   weapon={primary.name} active={primary.state === "active"} />}
                     {(alive && secondaryAsPrimary) && secondary !== null &&
                         <Weapon className={`player-top-primary ${position} ${side}`} weapon={secondary.name}
@@ -135,7 +130,6 @@ const Player2 = ({ player, isObserved }: IProps) => {
                 </div>
 
                 <div className={`player-middle-div ${position} ${side}`}>
-                    {/*{alive && (<Armor className={`player-middle-armor-icon ${position} ${side}`}/>)}   DONE */}
                     {alive && <Armor className={`player-middle-armor-icon ${position} ${side}`} health={player.state.health} armor={player.state.armor} helmet={player.state.helmet} />}
                     <div className={`player-middle-kills ${position} ${side} ${!alive ? 'dead' : ''}`}>
                         <CrosshairIcon className={`player-middle-kills-icon ${position} ${side} ${!alive ? 'dead' : ''}`}/>

@@ -23,10 +23,10 @@ export default function BesfOfScore({map, match, side}: Props) {
     const isRight = team?.orientation === 'right';
 
 
-    // Create array of map indicators
+
     const mapIndicators = Array(amountOfMaps).fill(0).map((_, index) => {
         const isWin = index < wins;
-        // Add the side class (ct/t) only if it's a win
+
         const className = `best-of-score-shape${isWin ? ` ${side.toLowerCase()}` : ''}`;
         return <div key={index} className={className} />;
     });

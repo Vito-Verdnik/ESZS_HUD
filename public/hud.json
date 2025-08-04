@@ -1,10 +1,10 @@
 {
-    "name":"ESZS HUD",
-    "version":"1.0.6",
-    "author":"Lexogrine",
+    "name":"ESZS HUD - Bachelors release",
+    "version":"1.0.0",
+    "author":"M'lady Swagalot - Vito Verdnik",
     "legacy": false,
-    "radar": true,
-    "killfeed": false,
+    "radar": false,
+    "killfeed": true,
     "game":"cs2",
     "boltobserv":{
         "css":false,

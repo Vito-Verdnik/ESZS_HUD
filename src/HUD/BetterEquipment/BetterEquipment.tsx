@@ -17,8 +17,14 @@ export default function BetterEquipment(props) {
 
             {props.grenades.map(grenade => (
                 [
-                    <Weapon className = 'better-equipment-grenade' key={`${grenade.name}-${grenade.state}`} weapon={grenade.name} active={grenade.state === "active"} isGrenade />,
-                    grenade.ammo_reserve === 2 ? <Weapon className = 'better-equipment-grenade' key={`${grenade.name}-${grenade.state}-double`} weapon={grenade.name} active={false} isGrenade /> : null,
+                    <Weapon
+                        className={`better-equipment-grenade${grenade.name === 'inferno' || grenade.name === 'incgrenade' ? ' molo' : ''}`}
+                        key={`${grenade.name}-${grenade.state}`} weapon={grenade.name}
+                        active={grenade.state === "active"} isGrenade/>,
+                    grenade.ammo_reserve === 2 ? <Weapon
+                        className={`better-equipment-grenade${grenade.name === 'inferno' || grenade.name === 'incgrenade' ? ' molo' : ''}`}
+                        key={`${grenade.name}-${grenade.state}-double`} weapon={grenade.name} active={false}
+                        isGrenade/> : null,
                 ]
             ))}
             {}
@@ -26,18 +32,3 @@ export default function BetterEquipment(props) {
         </div>
     );
 }
-
-
-
-
-/*
-            <div className="grenades">
-              {grenades.map(grenade => (
-                [
-                  <Weapon key={`${grenade.name}-${grenade.state}`} weapon={grenade.name} active={grenade.state === "active"} isGrenade />,
-                  grenade.ammo_reserve === 2 ? <Weapon key={`${grenade.name}-${grenade.state}-double`} weapon={grenade.name} active={false} isGrenade /> : null,
-                ]
-              ))}
-            </div>
-            <div className="secondary_weapon">{primary && secondary ? <Weapon weapon={secondary.name} active={secondary.state === "active"} /> : ""}</div>
- */
