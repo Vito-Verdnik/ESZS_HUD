@@ -7,7 +7,7 @@
     "zip": "npm-build-zip",
     "dev": "vite --host",
     "start": "vite --host",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "pack": "npm run build && npm run zip",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

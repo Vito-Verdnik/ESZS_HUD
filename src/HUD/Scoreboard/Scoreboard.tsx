@@ -59,7 +59,7 @@ export default function Scoreboard(props: IProps) {
 
     const [ show, setShow ] = useState(false);
 
-    const data = useConfig('');
+    const data = useConfig("");
 
     useAction('stageState', (state) => {
         setShow(state === "show");
